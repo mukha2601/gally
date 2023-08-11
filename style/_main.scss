@@ -1,0 +1,60 @@
+.gallery {
+   width: 100%;
+   min-height: 100vh;
+   background-color: black;
+ }
+ 
+ 
+ .searchResults {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+   grid-auto-rows: 25rem;
+   padding: 1rem;
+   padding-top: 5.5rem;
+ }
+ 
+ .photoBox {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition-duration: 0.4s;
+ }
+ 
+
+ 
+ .searchResult {
+   overflow: hidden;
+   width: 100%;
+   height: 100%;
+   position: relative;
+   transition: 0.4s;
+ 
+   &:hover {
+     transform: scale(0.95);
+ 
+     .photoBox {
+       transform: scale(1.2);
+     }
+ 
+     a {
+       transition: 0.3s;
+       bottom: 3%;
+       right: 3%;
+     }
+   }
+ }
+ 
+ 
+ 
+ .downLink {
+   z-index: 20;
+ }
+ 
+ ::-webkit-scrollbar {
+   width: 0.4rem;
+   background-color: rgb(75, 75, 75);
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+   background: rgb(167, 167, 167);
+ }
